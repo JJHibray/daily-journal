@@ -18,14 +18,6 @@
 
 console.table(allJournalEntries)*/
 
-const journalEntries = [
-    {
-        concept: "Array methods",
-        date: "07/24/2018",
-        entry: "We learned about array methods, but only forEach made sense",
-        mood: "Ok"
-    }
-]
 
 const makeJournalEntryComponent = (journalEntries) => {
     // Create your own HTML structure for a journal entry
@@ -44,17 +36,16 @@ const makeJournalEntryComponent = (journalEntries) => {
 
     // Arguments: entries (array of objects)
 
-    addArticleToDom = document.querySelector(".entryLog");
+    
 
-const renderJournalEntries = (entries) => {
-    entries.forEach(entry => {
-        addArticleToDom.innerHTML += makeJournalEntryComponent(entry)
+const addEntryToDom = (journalEntries) => {
+    document.querySelector(".entryLog").innerHTML += journalEntries
 
-    });
 
-};
+}
+
 
 // Invoke the render function
 
-renderJournalEntries(journalEntries)
+//renderJournalEntries(journalEntries)
 
